@@ -29,6 +29,7 @@ export default class Server {
         app.use(morgan("combined", { stream: accessLogStream }));
         app.use(bodyParser.urlencoded({ extended: true }));
         app.use(bodyParser.json());
-        app.use(unCoughtErrorHandler);
+        // this hides the error and log the error so not use this in develpment mode
+        // app.use(unCoughtErrorHandler);  
     }
 }
